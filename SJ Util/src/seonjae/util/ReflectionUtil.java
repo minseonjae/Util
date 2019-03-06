@@ -13,7 +13,7 @@ public class ReflectionUtil {
 		return null;
 	}
 	public Method getMethod(Class<?> clazz, String name, Class<?>... list) {
-		for (Method m : clazz.getMethods()) if (m.getName().equals(name)) if (ClassListEquals(m.getParameterTypes(), list));
+		for (Method m : clazz.getMethods()) if (m.getName().equals(name)) if (ClassListEquals(m.getParameterTypes(), list)) return m;
 		return null;
 	}
 	public Method getDeclaredMethods(Class<?> clazz, String name) {
@@ -21,7 +21,7 @@ public class ReflectionUtil {
 		return null;
 	}
 	public Method getDeclaredMethods(Class<?> clazz, String name, Class<?>... list) {
-		for (Method m : clazz.getMethods()) if (m.getName().equals(name)) if (ClassListEquals(m.getParameterTypes(), list));
+		for (Method m : clazz.getMethods()) if (m.getName().equals(name)) if (ClassListEquals(m.getParameterTypes(), list)) return m;
 		return null;
 	}
 	public Field getField(Class<?> clazz, String name) {
