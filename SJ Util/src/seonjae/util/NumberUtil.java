@@ -17,6 +17,19 @@ public class NumberUtil {
 	public int random(int mn, int mx) {
 		return (int) (random() * (mx - mn + 1) + mn);
 	}
+
+	public long getDayTick() {
+		return 86400000;
+	}
+	public long getHourTick() {
+		return 3600000;
+	}
+	public long getMinuteTick() {
+		return 60000;
+	}
+	public long getSecondTick() {
+		return 1000;
+	}
 	
 	public boolean isInteger(Object o) {
 		try {
